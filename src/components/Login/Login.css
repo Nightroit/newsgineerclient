@@ -1,0 +1,33 @@
+.Login  {
+    color: white;
+    padding: 55px;
+    position: absolute;
+    top: 49%;
+    left: 58%;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    border: 1px solid #90cbf8;
+    border-radius: 5px;
+  } 
+
+.Login .ErrorLogin {
+    color: white;
+    position: absolute;
+    top: 69%; 
+    left: 66%; 
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    border-radius: 5px;
+  }
+
+
+.main {
+  background-color: black;
+  width: 60%; 
+}
+  
+  .button {
+    margin-left: 51px; 
+  }

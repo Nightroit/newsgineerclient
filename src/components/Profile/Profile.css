@@ -1,0 +1,20 @@
+.profileMessage {
+    margin-left: 40px;
+    margin-bottom: 40px;  
+}
+.profileUsername {
+    background: linear-gradient(90deg, rgb(3, 45, 161) 11%, rgb(0, 145, 255) 48%, rgba(23,111,249,1) 85%);
+
+    
+    /* Set the background size and repeat properties. */
+    background-size: 100%;
+    background-repeat: repeat;
+  
+    /* Use the text as a mask for the background. */
+    /* This will show the gradient as a text color rather than element bg. */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    display: inline;  
+}
