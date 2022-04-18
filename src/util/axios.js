@@ -100,7 +100,7 @@ export default function(type, data, callback) {
         })
         .then(res => {
             if(res.data.alreadyExists) {
-                callback(null, "Username already exists")
+                callback(null, "Username Already Exists")
             } else  callback(res, null);
         })
         .catch(err => {
