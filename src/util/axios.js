@@ -4,7 +4,7 @@ export default function(type, data, callback) {
   
     if(type == "post") {
 
-        axios.post('http://localhost:5000/api/post', {content: data.content}, {
+        axios.post('https://newsgineer.herokuapp.com/api/post', {content: data.content}, {
             headers: {
                 'Authorization': `${data.token}` 
               }
@@ -15,7 +15,7 @@ export default function(type, data, callback) {
         })
    
     } else if(type == "deletePost") {
-        axios.post('http://localhost:5000/api/deletePost', {postId: data.postId}, {
+        axios.post('https://newsgineer.herokuapp.com/api/deletePost', {postId: data.postId}, {
             headers: {
                 'Authorization': `${data.token}` 
               }
@@ -26,7 +26,7 @@ export default function(type, data, callback) {
         })
     }
     else if(type == "timeFilter") {
-        axios.post('http://localhost:5000/api/', {last: data}, {
+        axios.post('https://newsgineer.herokuapp.com/api/', {last: data}, {
             headers: {
                 'Authorization': `${data.token}` 
               }
@@ -37,7 +37,7 @@ export default function(type, data, callback) {
         })
 
     } else if(type == "profile") {
-        axios.post("http://localhost:5000/api/profile", {username: data.username}, {
+        axios.post("https://newsgineer.herokuapp.com/api/profile", {username: data.username}, {
             headers: {
                 'Authorization': `${data.token}` 
               }
@@ -48,7 +48,7 @@ export default function(type, data, callback) {
         })
     }
     else if(type == "like") {
-        axios.post('http://localhost:5000/api/like', {postId: data.postId, username: data.username}, {
+        axios.post('https://newsgineer.herokuapp.com/api/like', {postId: data.postId, username: data.username}, {
             headers: {
                 'Authorization': `${data.token}` 
               }
@@ -59,7 +59,7 @@ export default function(type, data, callback) {
         })
     }
     else if(type == "feed") {
-        axios.post('http://localhost:5000/api/', {skip: data.pageNo}, { headers: {"Authorization" : `${data.token}`} })
+        axios.post('https://newsgineer.herokuapp.com/api/', {skip: data.pageNo}, { headers: {"Authorization" : `${data.token}`} })
             .then((data) => {
                 callback(data, null) 
             });
@@ -67,7 +67,7 @@ export default function(type, data, callback) {
     }
     else if(type == "categoryFilter") {
    
-        axios.post('http://localhost:5000/api/', {category: data.category}, {
+        axios.post('https://newsgineer.herokuapp.com/api/', {category: data.category}, {
             headers: {
                 'Authorization': `${data.token}` 
               }
@@ -79,7 +79,7 @@ export default function(type, data, callback) {
     } 
     else if(type == "login") {
  
-        axios.post('http://localhost:5000/api/users/login', {
+        axios.post('https://newsgineer.herokuapp.com/api/users/login', {
             username: data.username, 
             password: data.password
         })
@@ -92,7 +92,7 @@ export default function(type, data, callback) {
         })
     } 
     else {
-        axios.post('http://localhost:5000/api/users/register', {
+        axios.post('https://newsgineer.herokuapp.com/api/users/register', {
             name: data.username,
             email: data.email, 
             password: data.password, 
